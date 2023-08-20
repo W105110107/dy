@@ -147,6 +147,7 @@ func PublishList(c *gin.Context) {
 		Video_respondlist := make([]Video_respond, l)
 		//倒序添加
 		for i, x := range user.Videos {
+			fmt.Println(int64(len(user.Videos)))
 			Aut := User_respond{
 				Avatar:          user.Avatar,
 				BackgroundImage: user.BackgroundImage,
