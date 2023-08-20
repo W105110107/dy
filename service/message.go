@@ -24,6 +24,9 @@ func RunMessageServer() {
 			fmt.Printf("Accept conn failed: %v\n", err)
 			continue
 		}
+		for {
+			fmt.Println("conn:")
+		}
 
 		go process(conn)
 	}
@@ -35,6 +38,9 @@ func process(conn net.Conn) {
 	var buf [256]byte
 	for {
 		n, err := conn.Read(buf[:])
+		for {
+			fmt.Println("buf")
+		}
 		if n == 0 {
 			if err == io.EOF {
 				break

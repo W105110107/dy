@@ -44,6 +44,7 @@ func main() {
 	// 添加测试数据 (第一次启动是添加即可)
 	//Add_Test_Data()
 
+	//这个函数可能不需要运行
 	go service.RunMessageServer()
 
 	r := gin.Default()
